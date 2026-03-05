@@ -5,7 +5,7 @@ Built using a Gulp-based workflow.
 Build and Run:
 npm install
 gulp
-Live Website
+Live Website:
 
 http://da-teacher.ru
 
