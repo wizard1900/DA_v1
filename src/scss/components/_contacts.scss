@@ -1,0 +1,148 @@
+.contacts {
+  min-height: 900px;
+  background-color: var(--dark-color);
+  background-image: url(../img/contacts1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  @include mobile {
+    min-height: 0;
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+
+
+  &__question {
+    display: block;
+    width: 50%;
+    font-family: var(--second-family);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include minitablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    width: 60%;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 123%;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    @include minitablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      font-size: 28px;
+    }
+  }
+
+  &__phone,
+  &__phone a {
+    font-family: var(--second-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__mail,
+  &__mail a {
+    font-family: var(--second-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__phone a {
+    @include hover {
+      color: var(--first-color);
+    }
+
+    &:active {
+      color: #fff;
+    }
+  }
+
+  &__mail a {
+    @include hover {
+      color: var(--first-color);
+    }
+
+    &:active {
+      color: #fff;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  &__social-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__social-item svg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    fill: var(--first-color);
+
+    & path {
+      transition: fill .3s ease-in-out;
+    }
+
+    @include hover {
+      fill: var(--light-color);
+
+      & path:not(:first-child) {
+        fill: var(--first-color);
+      }
+    }
+
+    &:active {
+      fill: var(--first-color);
+
+      & path:not(:first-child) {
+        fill: var(--light-color);
+      }
+    }
+
+    @include mobile {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+}

@@ -1,0 +1,57 @@
+.consultation {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--dark-color);
+  border-top: 120px solid transparent;
+  margin-top: -120px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 120px;
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-right: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    width: 100%;
+
+    @include minidesk {
+      font-size: 29px;
+    }
+
+    @include mobile {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 27px;
+    }
+  }
+
+
+
+  &__btn {
+    display: block;
+    background-color: var(--first-color);
+    padding: 12px 25px;
+    width: 280px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}

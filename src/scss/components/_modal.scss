@@ -1,0 +1,115 @@
+.graph-modal {
+  &__container {
+    width: 30%;
+    min-width: 620px;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include minitablet {
+      min-width: 490px;
+      width: 80%;
+    }
+
+    @include mobile {
+      min-width: 307px;
+      width: 95%;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+
+    @include minitablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 28px;
+
+    @include minitablet {
+      font-size: 26px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--second-family);
+  }
+
+  &__form-label {
+    font-size: 19px;
+    margin-bottom: 35px;
+  }
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    height: 38px;
+  }
+
+  &__form-text {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    height: 80px;
+  }
+
+  &__form-btn {
+    display: block;
+    background-color: var(--first-color);
+    color: var(--light-color);
+    font-size: 18px;
+    height: 60px;
+    margin-bottom: 20px;
+
+    &:focus {
+      background-color: var(--light-color);
+      color: var(--first-color);
+      border-width: 2px;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    color: var(--first-color);
+    font-size: 16px;
+    bottom: 325px;
+    opacity: 0;
+  }
+
+  &__error--active {
+    opacity: 1;
+  }
+
+  &__close:focus {
+    outline: 2px solid var(--first-color);
+    outline-offset: 2px;
+  }
+
+}
+
+.just-validate-error-label {
+  position: absolute;
+  margin-top: 5px;
+  font-size: 16px;
+
+}
+
+.graph-modal__form-btn+.just-validate-error-label {
+  bottom: 114px;
+}

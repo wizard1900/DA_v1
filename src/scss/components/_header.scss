@@ -1,0 +1,214 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 7;
+  background-color: var(--dark-color);
+  padding-bottom: 10px;
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    display: none;
+  }
+
+  @include tablet {
+    position: absolute;
+  }
+
+  &__message {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 700;
+    font-size: 23px;
+    padding-top: 10px;
+
+    & a {
+      text-decoration: underline;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+      display: block;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding-top: 10px;
+    // padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 0;
+    justify-items: stretch;
+
+    @include minitablet {
+      row-gap: 15px;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__ie {
+    display: none;
+  }
+
+
+  &__person {
+    grid-column: 1/3 span;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    min-width: 214px;
+
+
+    @include tablet {
+      grid-column: 1/3 span;
+      font-size: 22px;
+    }
+
+    @include minitablet {
+      grid-column: 1/3 span;
+    }
+
+    @include mobile {
+      grid-column: 1/12 span;
+      grid-row: 1;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    grid-column: 7/2 span;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 75px;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--light-color);
+
+    @include minidesk {
+      font-size: 22px;
+      width: 210px;
+
+    }
+
+    @include tablet {
+      font-size: 20px;
+      width: 200px;
+      height: 60px;
+      grid-column: 5/5 span;
+    }
+
+    @include minitablet {
+      grid-column: 1/3 span;
+    }
+
+    @include mobile {
+      grid-column: 1/12 span;
+      grid-row: 3;
+      margin: 0 auto;
+      margin-bottom: 14px;
+    }
+
+    & img {
+      transition: opacity 0.3s ease-in-out;
+
+      @include hover {
+        opacity: 0;
+      }
+    }
+
+    &:active img {
+      opacity: 1;
+    }
+
+    // outline: 2px solid white;
+
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+
+  &__logo-text {
+    display: block;
+    position: absolute;
+  }
+
+  &__button {
+    display: block;
+    min-width: 280px;
+    grid-column: 10/3 span;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--first-color);
+    color: var(--light-color);
+    padding: 20px 10px;
+
+
+    @include tablet {
+      min-width: 218px;
+      font-size: 12px;
+      padding: 10px 7px;
+      grid-row: 2;
+      position: relative;
+      bottom: 33px;
+    }
+
+    @include minitablet {
+      grid-column: 4/9 span;
+      justify-self: end;
+      bottom: 0;
+      width: 228px;
+    }
+
+    @include mobile {
+      grid-column: 1/12 span;
+      grid-row: 4;
+      margin: 0 auto;
+    }
+  }
+
+  &__phone {
+    margin-top: 2px;
+    grid-column: 4/3 span;
+    min-width: 130px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    color: inherit;
+
+    @include tablet {
+      margin-top: 0;
+      position: relative;
+      bottom: 21px;
+      grid-column: 11/2 span;
+      grid-row: 1;
+      text-align: end;
+    }
+
+    @include minitablet {
+      min-width: 0;
+      grid-column: 6/7 span;
+      bottom: 0;
+    }
+
+    @include mobile {
+      grid-column: 1/12 span;
+      grid-row: 2;
+      text-align: center;
+    }
+  }
+}
