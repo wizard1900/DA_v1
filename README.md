@@ -5,7 +5,7 @@ Built using a Gulp-based workflow.
 
 Build and Run:
 
-npm install
+npm i
 
 gulp
 
